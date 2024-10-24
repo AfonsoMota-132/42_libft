@@ -32,7 +32,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	while (ft_trim(s1[end], set))
 		end--;
 	str = ft_substr(s1, start, ((end - start) + 1));
-	return (str);	
+	return (str);
 }
 
 static	size_t	ft_trim(char const s1, char const *set)
@@ -40,7 +40,7 @@ static	size_t	ft_trim(char const s1, char const *set)
 	size_t	i;
 
 	i = 0;
-	while(set[i] != '\0')
+	while (set[i] != '\0')
 	{
 		if (s1 == set[i])
 			return (1);

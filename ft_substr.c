@@ -12,14 +12,14 @@
 
 #include "libft.h"
 
-size_t	ft_totlen(size_t str_len, size_t start, size_t len);
+static size_t	ft_totlen(size_t str_len, size_t start, size_t len);
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	i;
 	size_t	str_len;
-	char *sub_str;
-	
+	char	*sub_str;
+
 	i = 0;
 	str_len = ft_strlen(s);
 	if (s == NULL)
@@ -41,7 +41,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	return (sub_str);
 }
 
-size_t	ft_totlen(size_t str_len, size_t start, size_t len)
+static size_t	ft_totlen(size_t str_len, size_t start, size_t len)
 {
 	size_t	total;
 

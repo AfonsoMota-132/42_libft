@@ -12,10 +12,10 @@
 
 #include "libft.h"
 
-static size_t		ft_count_parts(const char *s, char c);
-static char	**ft_split_strs(char const *s, char c, char **strs, size_t segs);
-static size_t		ft_partslen(char const *s, char sep);
-static char	**ft_free(char **strs, size_t seg);
+static size_t	ft_count_parts(const char *s, char c);
+static char		**ft_splitstr(char const *s, char c, char **strs, size_t segs);
+static size_t	ft_partslen(char const *s, char sep);
+static char		**ft_free(char **strs, size_t seg);
 
 char	**ft_split(char const *s, char c)
 {
@@ -33,9 +33,9 @@ char	**ft_split(char const *s, char c)
 	strs[count_parts] = 0;
 	if (count_parts > 0)
 	{
-		ft_split_strs(s, c, strs, count_parts);	
+		ft_splitstr(s, c, strs, count_parts);
 	}
-	return (strs);	
+	return (strs);
 }
 
 static size_t	ft_count_parts(const char *s, char c)
@@ -55,18 +55,18 @@ static size_t	ft_count_parts(const char *s, char c)
 			++count;
 		}
 		if (s[i] == c && boolean)
-			boolean = 0;	
+			boolean = 0;
 		i++;
 	}
 	return (count);
 }
 
-static char	**ft_split_strs(char const *s, char c, char **strs, size_t segs)
+static char	**ft_splitstr(char const *s, char c, char **strs, size_t segs)
 {
 	size_t	segment;
 	size_t	i;
 	size_t	j;
-	
+
 	i = 0;
 	segment = 0;
 	while (segment < segs)
@@ -85,7 +85,7 @@ static char	**ft_split_strs(char const *s, char c, char **strs, size_t segs)
 		}
 		segment++;
 	}
-	return(strs);
+	return (strs);
 }
 
 static size_t	ft_partslen(char const *s, char c)
@@ -108,6 +108,7 @@ static char	**ft_free(char **strs, size_t seg)
 	free(strs);
 	return (0);
 }
+/*
 int main(int argc, char **argv)
 {
 	char **idk;
@@ -125,4 +126,4 @@ int main(int argc, char **argv)
 	}
 	else
 		printf("Not enough arguments");
-}
+}*/
