@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afogonca <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: afogonca <afogonca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/21 09:28:08 by afogonca          #+#    #+#             */
-/*   Updated: 2024/10/23 10:32:29 by afogonca         ###   ########.fr       */
+/*   Created: 2024/10/25 09:45:51 by afogonca          #+#    #+#             */
+/*   Updated: 2024/10/25 09:46:37 by afogonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #ifndef LIBFT_H
 # define LIBFT_H
@@ -35,4 +36,14 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
 int		ft_atoi(const char *nptr);
+void	ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(char *s, int fd);
+void	ft_putendl_fd(char *s, int fd);
+void	ft_putnbr_fd(int n, int fd);
+char	*ft_itoa(int n);
+char	**ft_split(char const *s, char c);
+int		ft_strncmp(const char *s1, const char *s2, size_t n);
+char	*ft_strtrim(char const *s1, char const *set);
+char	*ft_strdup(const char *src);
+char	*ft_strchr(const char *s, int c);
 #endif

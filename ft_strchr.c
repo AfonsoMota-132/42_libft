@@ -1,25 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afogonca <afogonca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/25 09:09:34 by afogonca          #+#    #+#             */
-/*   Updated: 2024/10/25 09:10:45 by afogonca         ###   ########.fr       */
+/*   Created: 2024/10/25 11:22:21 by afogonca          #+#    #+#             */
+/*   Updated: 2024/10/25 11:35:24 by afogonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
+char	*ft_strchr(const char *s, int c)
 {
-	int	i;
+	char	*temp;
 
-	i = 0;
-	while (s[i] != '\0')
+	temp = (char *) s;
+	while (*temp)
 	{
-		ft_putchar_fd(s[i], fd);
-		i++;
+		if (*temp == (unsigned char) c)
+			return (temp);
+		temp++;
 	}
+	if (c == 0)
+		return (temp);
+	return (NULL);
 }

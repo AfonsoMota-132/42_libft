@@ -20,12 +20,10 @@ static char		**ft_free(char **strs, size_t seg);
 char	**ft_split(char const *s, char c)
 {
 	char	**strs;
-	size_t	i;
 	size_t	count_parts;
 
 	if (s == NULL)
 		return (NULL);
-	i = 0;
 	count_parts = ft_count_parts(s, c);
 	strs = malloc(sizeof(char *) * (count_parts + 1));
 	if (strs == NULL)

@@ -6,7 +6,7 @@
 /*   By: afogonca <afogonca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 09:18:36 by afogonca          #+#    #+#             */
-/*   Updated: 2024/10/25 09:51:36 by afogonca         ###   ########.fr       */
+/*   Updated: 2024/10/25 09:29:18 by afogonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,46 +14,38 @@
 #include "libft.h"
 
 static int	ft_nbrlen(int n);
-static	void ft_fill(int len, int offset, int n, char *str);
 
 char	*ft_itoa(int n)
 {
 	char	*str;
+	int		i;
 	int		len;
-	int		offset;
 
-	offset = 0;
 	len = ft_nbrlen(n);
-	str = malloc(sizeof(char) * (len + 1));
+	str = (char *) malloc(sizeof(char) * (i + 1));
 	if (str == NULL)
 		return (NULL);
+	i = len - 2;
 	if (n == -2147483648)
 	{
-		str[0] = '-';
-		str[1] = '2';
-		offset = 2;
-		n = 147483648;
+		str[i] = '8';
+		n = -214748364;
+		i--;
 	}
 	if (n < 0)
 	{
 		str[0] = '-';
-		offset = 1;
 		n *= -1;
 	}
-	ft_fill(len, offset, n, str);
-	str[len] = '\0';
+	while (n != 0)
+	{	
+		str[i] = (n % 10) + '0';
+		i--;
+	}
+	str[len--] = '\0';
 	return (str);
 }
 
-static	void	ft_fill(int len, int offset, int n, char *str)
-{
-	while (len > offset)
-	{
-		str[len - 1] = n % 10 + '0';
-		n = n / 10;
-		len--;
-	}
-}
 static int	ft_nbrlen(int n)
 {
 	int	len;
@@ -79,8 +71,28 @@ static int	ft_nbrlen(int n)
 	return (len);
 }
 
-/*
 int	main(void)
 {
-	printf("%s\n", ft_itoa(-2147483647));
-}*/
+	printf("%d\n", ft_nbrlen(2147483647));
+	printf("%d\n", ft_nbrlen(147483647));
+	printf("%d\n", ft_nbrlen(47483647));
+	printf("%d\n", ft_nbrlen(7483647));
+	printf("%d\n", ft_nbrlen(483647));
+	printf("%d\n", ft_nbrlen(83647));
+	printf("%d\n", ft_nbrlen(3647));
+	printf("%d\n", ft_nbrlen(647));
+	printf("%d\n", ft_nbrlen(47));
+	printf("%d\n", ft_nbrlen(7));
+	printf("%d\n", ft_nbrlen(0));
+	printf("%d\n", ft_nbrlen(-2147483647));
+	printf("%d\n", ft_nbrlen(-147483647));
+	printf("%d\n", ft_nbrlen(-47483647));
+	printf("%d\n", ft_nbrlen(-7483647));
+	printf("%d\n", ft_nbrlen(-483647));
+	printf("%d\n", ft_nbrlen(-83647));
+	printf("%d\n", ft_nbrlen(-3647));
+	printf("%d\n", ft_nbrlen(-647));
+	printf("%d\n", ft_nbrlen(-47));
+	printf("%d\n", ft_nbrlen(-7));
+	printf("%d\n", ft_nbrlen(0));
+}
