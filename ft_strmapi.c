@@ -1,32 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afogonca <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: afogonca <afogonca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/19 12:04:20 by afogonca          #+#    #+#             */
-/*   Updated: 2024/10/22 16:24:24 by afogonca         ###   ########.fr       */
+/*   Created: 2024/10/26 11:42:13 by afogonca          #+#    #+#             */
+/*   Updated: 2024/10/26 12:00:37 by afogonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	size_t				i;
-	unsigned char		*cpy_dest;
-	const unsigned char	*cpy_src;
+	char				*str;
+	unsigned int		i;
 
 	i = 0;
-	if (!dest && !src)
-		return (0);
-	cpy_dest = (unsigned char *) dest;
-	cpy_src = (unsigned char *) src;
-	while (i < n)
+	str = malloc(sizeof(char) * (ft_strlen(s) + 1));
+	if (!str)
+		return (NULL);
+	while (s[i])
 	{
-		cpy_dest[i] = cpy_src[i];
+		str[i] = (*f)(i, s[i]);
 		i++;
 	}
-	return (dest);
+	str[i] = '\0';
+	return (str);
 }

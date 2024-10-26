@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+
 static size_t	ft_totlen(size_t str_len, size_t start, size_t len);
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)

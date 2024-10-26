@@ -10,11 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "libft.h"
 
-static int	ft_nbrlen(int n);
-static	void ft_fill(int len, int offset, int n, char *str);
+static int		ft_nbrlen(int n);
+static void		ft_fill(int len, int offset, int n, char *str);
 
 char	*ft_itoa(int n)
 {
@@ -54,13 +53,14 @@ static	void	ft_fill(int len, int offset, int n, char *str)
 		len--;
 	}
 }
+
 static int	ft_nbrlen(int n)
 {
 	int	len;
 
 	len = 0;
 	if (n == 0)
-		return 1;
+		return (1);
 	if (n == -2147483648)
 	{
 		len += 2;
