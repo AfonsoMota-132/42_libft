@@ -102,8 +102,11 @@ static char	**ft_free(char **strs, size_t seg)
 	size_t	i;
 
 	i = 0;
-	while (i++ < seg)
+	while (i < seg)
+	{
 		free(strs[i]);
+		i++;
+	}
 	free(strs);
 	return (0);
 }
