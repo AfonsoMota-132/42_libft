@@ -23,6 +23,8 @@ char	*ft_strchr(const char *s, int c)
 			return (temp);
 		temp++;
 	}
+	if (*temp == (unsigned char) c)
+		return (temp);
 	if (c == 0)
 		return (temp);
 	return (NULL);
