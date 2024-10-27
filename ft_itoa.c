@@ -78,7 +78,6 @@ static int	ft_nbrlen(int n)
 	}
 	return (len);
 }
-
 /*
 int	main(void)
 {
