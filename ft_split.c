@@ -3,101 +3,101 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afogonca <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: afogonca <afogonca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/23 10:34:17 by afogonca          #+#    #+#             */
-/*   Updated: 2024/10/23 15:44:18 by afogonca         ###   ########.fr       */
+/*   Created: 2024/10/28 14:51:04 by afogonca          #+#    #+#             */
+/*   Updated: 2024/10/28 14:51:39 by afogonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	ft_count_parts(const char *s, char c);
-static char		**ft_splitstr(char const *s, char c, char **strs, size_t segs);
-static size_t	ft_partslen(char const *s, char sep);
-static char		**ft_free(char **strs, size_t seg);
+static int		ft_segcount(char const *s, char sep);
+static char		**ft_alloc(char **strs, char const *s, char sep, size_t segs);
+static char		**ft_free_split(char **strs, size_t seg);
+static size_t	ft_seglen(char const *s, char sep);
 
 char	**ft_split(char const *s, char c)
 {
 	char	**strs;
-	size_t	count_parts;
+	size_t	segs;
 
-	if (s == NULL)
+	if (!s)
 		return (NULL);
-	count_parts = ft_count_parts(s, c);
-	strs = malloc(sizeof(char *) * (count_parts + 1));
-	if (strs == NULL)
+	segs = ft_segcount(s, c);
+	strs = malloc((segs + 1) * sizeof(char *));
+	if (!strs)
 		return (NULL);
-	strs[count_parts] = 0;
-	if (count_parts > 0)
-	{
-		ft_splitstr(s, c, strs, count_parts);
-	}
+	strs[segs] = 0;
+	if (segs > 0)
+		strs = ft_alloc(strs, s, c, segs);
 	return (strs);
 }
 
-static size_t	ft_count_parts(const char *s, char c)
+static int	ft_segcount(char const *s, char sep)
 {
-	size_t	count;
+	size_t	segs;
 	size_t	i;
-	size_t	boolean;
+	int		counting;
 
-	boolean = 0;
 	i = 0;
-	count = 0;
+	segs = 0;
+	counting = 0;
+	if (!s)
+		return (0);
 	while (s[i])
 	{
-		if (s[i] != c && !boolean)
+		if (s[i] != sep && !counting)
 		{
-			boolean = 1;
-			++count;
+			counting = 1;
+			++segs;
 		}
-		if (s[i] == c && boolean)
-			boolean = 0;
-		i++;
+		if (s[i] == sep && counting)
+			counting = 0;
+		++i;
 	}
-	return (count);
+	return (segs);
 }
 
-static char	**ft_splitstr(char const *s, char c, char **strs, size_t segs)
+static char	**ft_alloc(char **strs, char const *s, char sep, size_t segs)
 {
-	size_t	segment;
 	size_t	i;
 	size_t	j;
+	size_t	seg;
 
 	i = 0;
-	segment = 0;
-	while (segment < segs)
+	seg = 0;
+	while (seg < segs)
 	{
 		j = 0;
-		while (s[i] && s[i] == c)
-			i++;
-		strs[segment] = malloc(sizeof(char) * (ft_partslen(&s[i], c) + 1));
-		if (strs[segment] == NULL)
-			return (ft_free(strs, segment));
-		while (s[i] && s[i] != c)
+		while (s[i] && s[i] == sep)
+			++i;
+		strs[seg] = malloc(ft_seglen(&s[i], sep) + 1);
+		if (!strs[seg])
+			return (ft_free_split(strs, seg));
+		while (s[i] && s[i] != sep)
 		{
-			strs[segment][j] = s[i];
-			j++;
-			i++;
+			strs[seg][j] = s[i];
+			++i;
+			++j;
 		}
-		strs[segment][j] = '\0';
-		segment++;
+		strs[seg][j] = '\0';
+		++seg;
 	}
 	return (strs);
 }
 
-static size_t	ft_partslen(char const *s, char c)
+static size_t	ft_seglen(char const *s, char sep)
 {
 	size_t	i;
 
 	i = 0;
-	while (s[i] && s[i] != c)
-		i++;
+	while (s[i] && s[i] != sep)
+		++i;
 	return (i);
 }
 
-static char	**ft_free(char **strs, size_t seg)
+static	char	**ft_free_split(char **strs, size_t seg)
 {
 	size_t	i;
 
@@ -105,27 +105,8 @@ static char	**ft_free(char **strs, size_t seg)
 	while (i < seg)
 	{
 		free(strs[i]);
-		i++;
+		++i;
 	}
 	free(strs);
 	return (0);
 }
-/*
-int main(int argc, char **argv)
-{
-	char **idk;
-	size_t	i = 0;
-	if(argc >= 3)
-	{	
-		idk = ft_split(argv[1], *argv[2]);
-		while (idk[i] != 0)
-		{
-			printf("%s\n", idk[i]);	
-			free(idk[i]);
-			i++;
-		}
-		free(idk);
-	}
-	else
-		printf("Not enough arguments");
-}*/
