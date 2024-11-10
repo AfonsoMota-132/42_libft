@@ -17,8 +17,10 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdio.h>
+# include <stdarg.h>
+# include <fcntl.h>
 
-// libc
+//		Libc		//
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);
@@ -43,7 +45,7 @@ int		ft_atoi(const char *nptr);
 void	*ft_calloc(size_t nmemb, size_t size);
 char	*ft_strdup(const char *src);
 
-// Additional
+//		Additional		//
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
@@ -56,6 +58,7 @@ void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 
+//		Lists		//
 typedef struct s_list
 {
 	void			*content;
@@ -71,5 +74,31 @@ void	ft_lstdelone(t_list *lst, void (*del)(void*));
 void	ft_lstclear(t_list **lst, void (*del)(void*));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+
+//		Printf		//
+
+int	ft_printf(const char *strs, ...);
+int	ft_printfstr(char *str);
+int	ft_printfnbr(int nbr);
+int	ft_printfunbr(unsigned int nbr);
+int	ft_printfhex(unsigned int nbr, int uporlow);
+int	ft_printfpointer(void *pointer);
+
+//		GNL			//
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 5
+# endif
+
+//		Main		//
+
+void	*ft_calloc(size_t nbytes, size_t size);
+char	*ft_read(int fd, char *buffer);
+char	*get_next_line(int fd);
+
+//		Utils		//
+//
+char	*ft_getline(char *buffer);
+char	*ft_bufferupdt(char *buffer);
 
 #endif
