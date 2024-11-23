@@ -77,12 +77,12 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 //		Printf		//
 
-int	ft_printf(const char *strs, ...);
-int	ft_printfstr(char *str);
-int	ft_printfnbr(int nbr);
-int	ft_printfunbr(unsigned int nbr);
-int	ft_printfhex(unsigned int nbr, int uporlow);
-int	ft_printfpointer(void *pointer);
+int		ft_printf(const char *strs, ...);
+int		ft_printfstr(char *str);
+int		ft_printfnbr(int nbr);
+int		ft_printfunbr(unsigned int nbr);
+int		ft_printfhex(unsigned int nbr, int uporlow);
+int		ft_printfpointer(void *pointer);
 
 //		GNL			//
 # ifndef BUFFER_SIZE

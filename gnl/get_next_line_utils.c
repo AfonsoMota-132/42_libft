@@ -66,7 +66,8 @@ char	*ft_strjoin_gnl(char *s1, char *s2)
 		free(s1);
 		return (NULL);
 	}
-	str = ft_calloc_gnl((ft_strlen_gnl(s1) + ft_strlen_gnl(s2) + 1), sizeof(char));
+	str = ft_calloc_gnl((ft_strlen_gnl(s1) + ft_strlen_gnl(s2) + 1),
+			sizeof(char));
 	if (!str)
 		return (NULL);
 	i = -1;
