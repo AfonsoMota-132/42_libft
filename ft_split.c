@@ -14,7 +14,6 @@
 
 static int		ft_segcount(char const *s, char sep);
 static char		**ft_alloc(char **strs, char const *s, char sep, size_t segs);
-static char		**ft_free_split(char **strs, size_t seg);
 static size_t	ft_seglen(char const *s, char sep);
 
 char	**ft_split(char const *s, char c)
@@ -97,7 +96,7 @@ static size_t	ft_seglen(char const *s, char sep)
 	return (i);
 }
 
-static	char	**ft_free_split(char **strs, size_t seg)
+char	**ft_free_split(char **strs, size_t seg)
 {
 	size_t	i;
 
