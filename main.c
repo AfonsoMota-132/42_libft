@@ -28,4 +28,6 @@ int main(void)
 		printf("old %s\n", old[i]);
 	for (int i = 0; cpy[i]; i++)
 		printf("cpy %s\n", cpy[i]);
+	ft_matrix_free((void**)old);
+	ft_matrix_free((void**)cpy);
 }
