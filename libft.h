@@ -109,5 +109,6 @@ char	*ft_bufferupdt(char *buffer);
 char	*ft_chrjoin(char const *str, char const chr);
 long	ft_atol(const char *str);
 int		ft_strcmp(char *s1, char *s2);
+void **ft_matrixcopy(void **matrix);
 
 #endif
