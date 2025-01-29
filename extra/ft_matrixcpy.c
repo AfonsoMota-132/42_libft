@@ -12,7 +12,7 @@
 
 #include "../libft.h"
 
-void **ft_matrixcopy(void **matrix)
+void	**ft_matrixcopy(void **matrix)
 {
 	int		i;
 	void	**cpy;

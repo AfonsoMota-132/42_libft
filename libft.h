@@ -6,7 +6,7 @@
 /*   By: afogonca <afogonca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 09:45:51 by afogonca          #+#    #+#             */
-/*   Updated: 2024/10/25 09:46:37 by afogonca         ###   ########.fr       */
+/*   Updated: 2025/01/25 10:08:30 by afogonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,7 +86,7 @@ int		ft_printfhex(unsigned int nbr, int uporlow);
 int		ft_printfpointer(void *pointer);
 
 //		GNL			//
-# ifndef BUFFER_SIZE
+# ifndef BUFER_SIZE
 #  define BUFFER_SIZE 5
 # endif
 
@@ -111,5 +111,7 @@ long	ft_atol(const char *str);
 int		ft_strcmp(char *s1, char *s2);
 void	**ft_matrixcopy(void **matrix);
 void	ft_matrix_free(void **matrix);
+int		ft_strchr_len(char *s, int c);
+int		ft_strrchr_len(const char *s, int c);
 
 #endif
