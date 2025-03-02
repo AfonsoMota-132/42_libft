@@ -1,29 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_matrixcpy.c                                     :+:      :+:    :+:   */
+/*   ft_strchr_len.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afogonca <afogonca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/24 10:32:32 by afogonca          #+#    #+#             */
-/*   Updated: 2025/01/24 10:41:08 by afogonca         ###   ########.fr       */
+/*   Created: 2025/03/02 09:51:24 by afogonca          #+#    #+#             */
+/*   Updated: 2025/03/02 09:52:40 by afogonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-void	**ft_matrixcopy(void **matrix)
+int	ft_strchr_len(char *str, char c)
 {
-	int		i;
-	void	**cpy;
+	int	i;
 
 	i = 0;
-	while (matrix[i])
+	while (str[i] != 'c')
 		i++;
-	cpy = ft_calloc(sizeof(void *), i + 1);
-	i = -1;
-	while (matrix[++i])
-		cpy[i] = ft_strdup(matrix[i]);
-	cpy[i] = NULL;
-	return (cpy);
+	if (i == ft_strlen(str))
+		return (-1);
+	return (i);
 }

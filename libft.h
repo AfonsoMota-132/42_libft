@@ -111,5 +111,6 @@ long	ft_atol(const char *str);
 int		ft_strcmp(char *s1, char *s2);
 void	**ft_matrixcopy(void **matrix);
 void	ft_matrix_free(void **matrix);
+int		ft_strchr_len(char *str, char c);
 
 #endif
