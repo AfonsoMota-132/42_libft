@@ -17,9 +17,7 @@ size_t	ft_strchr_len(char *str, char c)
 	size_t	i;
 
 	i = 0;
-	while (str[i] != c)
+	while (str[i] && str[i] != c)
 		i++;
-	if (i == ft_strlen(str))
-		return (-1);
 	return (i);
 }
