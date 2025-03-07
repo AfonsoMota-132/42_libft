@@ -6,7 +6,7 @@
 #    By: afogonca <afogonca@student.42porto.com>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/24 18:53:43 by afogonca          #+#    #+#              #
-#    Updated: 2024/10/25 09:44:29 by afogonca         ###   ########.fr        #
+#    Updated: 2025/03/07 10:32:10 by afogonca         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,7 @@ PRINTF = printf/ft_printf.c printf/ft_printfhex.c printf/ft_printfpointer.c \
 GNL = gnl/get_next_line.c gnl/get_next_line_utils.c
 
 EXTRA = extra/ft_chrjoin.c extra/ft_atol.c extra/ft_strcmp.c extra/ft_matrixcpy.c \
-		extra/ft_matrix_free.c extra/ft_strchr_len.c
+		extra/ft_matrix_free.c extra/ft_strchr_len.c extra/ft_split_multi.c
 
 SRCS = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
     	ft_strlen.c ft_memset.c ft_bzero.c ft_memcpy.c ft_memmove.c ft_substr.c \

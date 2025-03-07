@@ -6,7 +6,7 @@
 /*   By: afogonca <afogonca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 09:45:51 by afogonca          #+#    #+#             */
-/*   Updated: 2024/10/25 09:46:37 by afogonca         ###   ########.fr       */
+/*   Updated: 2025/03/07 10:31:49 by afogonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -112,5 +112,6 @@ int		ft_strcmp(char *s1, char *s2);
 void	**ft_matrixcopy(void **matrix);
 void	ft_matrix_free(void **matrix);
 size_t	ft_strchr_len(char *str, char c);
+char	**ft_split_multi(char *str, char *charset);
 
 #endif
