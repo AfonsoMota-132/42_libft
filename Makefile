@@ -28,13 +28,16 @@ GNL = gnl/get_next_line.c gnl/get_next_line_utils.c
 EXTRA = extra/ft_chrjoin.c extra/ft_atol.c extra/ft_strcmp.c extra/ft_matrixcpy.c \
 		extra/ft_matrix_free.c extra/ft_strchr_len.c extra/ft_split_multi.c
 
-SRCS = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
-    	ft_strlen.c ft_memset.c ft_bzero.c ft_memcpy.c ft_memmove.c ft_substr.c \
-		ft_strjoin.c ft_strlcpy.c ft_strlcat.c ft_toupper.c ft_tolower.c ft_atoi.c \
-		ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_itoa.c \
-		ft_putnbr_fd.c ft_strncmp.c ft_strtrim.c ft_strdup.c ft_strchr.c \
-		ft_calloc.c ft_memchr.c ft_strrchr.c ft_strmapi.c ft_striteri.c ft_memcmp.c \
-		ft_strnstr.c ft_split.c $(PRINTF) $(GNL) $(EXTRA)
+IS_CHAR = $(addprefix is_char/, ft_isalnum.c ft_isalpha.c ft_isascii.c \
+		  ft_isdigit.c ft_islower.c ft_isprint.c ft_isupper.c)
+
+SRCS = $(IS_CHAR) $(PRINTF) $(GNL) $(EXTRA)
+#     	ft_strlen.c ft_memset.c ft_bzero.c ft_memcpy.c ft_memmove.c ft_substr.c \
+# 		ft_strjoin.c ft_strlcpy.c ft_strlcat.c ft_toupper.c ft_tolower.c ft_atoi.c \
+# 		ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_itoa.c \
+# 		ft_putnbr_fd.c ft_strncmp.c ft_strtrim.c ft_strdup.c ft_strchr.c \
+# 		ft_calloc.c ft_memchr.c ft_strrchr.c ft_strmapi.c ft_striteri.c ft_memcmp.c \
+# 		ft_strnstr.c ft_split.c $(PRINTF) $(GNL) $(EXTRA)
 
 BONUS_OBJS = ${BONUS_SRCS:.c=.o}
 OBJS = ${SRCS:.c=.o}
