@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afogonca <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: afogonca <afogonca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/19 11:08:56 by afogonca          #+#    #+#             */
-/*   Updated: 2024/10/22 16:08:08 by afogonca         ###   ########.fr       */
+/*   Created: 2025/10/23 22:36:16 by afogonca          #+#    #+#             */
+/*   Updated: 2025/10/23 22:36:21 by afogonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "mem.h"
 
 void	ft_bzero(void *s, size_t n)
 {

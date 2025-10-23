@@ -5,12 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: afogonca <afogonca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/26 10:10:03 by afogonca          #+#    #+#             */
-/*   Updated: 2024/10/26 10:19:34 by afogonca         ###   ########.fr       */
+/*   Created: 2025/10/23 22:36:50 by afogonca          #+#    #+#             */
+/*   Updated: 2025/10/23 22:36:51 by afogonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "mem.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

@@ -1,23 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr_len.c                                    :+:      :+:    :+:   */
+/*   in_str.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afogonca <afogonca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/02 09:51:24 by afogonca          #+#    #+#             */
-/*   Updated: 2025/03/02 09:52:40 by afogonca         ###   ########.fr       */
+/*   Created: 2025/10/23 22:48:53 by afogonca          #+#    #+#             */
+/*   Updated: 2025/10/23 22:52:37 by afogonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#ifndef IN_STR_H
+# define IN_STR_H
 
-size_t	ft_strchr_len(char *str, char c)
-{
-	size_t	i;
+#ifndef LIBFT_H
+#  include "../libft.h"
+# endif
 
-	i = 0;
-	while (str[i] && str[i] != c)
-		i++;
-	return (i);
-}
+char	*ft_strchr(const char *s, int c);
+size_t	ft_strchr_len(const char *s, char c);
+char	*ft_strrchr(const char *s, int c);
+size_t	ft_strrchr_len(const char *s, char c);
+char	*ft_strnstr(const char *big, const char *little, size_t len);
+
+#endif

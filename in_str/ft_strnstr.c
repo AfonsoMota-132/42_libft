@@ -6,11 +6,11 @@
 /*   By: afogonca <afogonca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 12:27:51 by afogonca          #+#    #+#             */
-/*   Updated: 2024/10/26 13:48:19 by afogonca         ###   ########.fr       */
+/*   Updated: 2025/10/23 22:55:26 by afogonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "in_str.h"
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {

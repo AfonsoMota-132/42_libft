@@ -1,31 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr_len.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afogonca <afogonca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/25 11:22:21 by afogonca          #+#    #+#             */
-/*   Updated: 2024/10/25 11:35:24 by afogonca         ###   ########.fr       */
+/*   Created: 2025/10/23 22:56:08 by afogonca          #+#    #+#             */
+/*   Updated: 2025/10/23 22:57:04 by afogonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "in_str.h"
 
-char	*ft_strchr(const char *s, int c)
+size_t	ft_strrchr_len(const char *str, char c)
 {
-	char	*temp;
+	size_t	i;
 
-	temp = (char *) s;
-	while (*temp)
-	{
-		if (*temp == (unsigned char) c)
-			return (temp);
-		temp++;
-	}
-	if (*temp == (unsigned char) c)
-		return (temp);
-	if (c == 0)
-		return (temp);
-	return (NULL);
+	i = ft_strlen(str) - 1;
+	while (str[i] && str[i] != c)
+		i--;
+	return (i);
 }

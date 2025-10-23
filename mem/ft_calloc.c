@@ -5,12 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: afogonca <afogonca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/26 09:19:18 by afogonca          #+#    #+#             */
-/*   Updated: 2024/10/26 10:07:47 by afogonca         ###   ########.fr       */
+/*   Created: 2025/10/23 22:36:28 by afogonca          #+#    #+#             */
+/*   Updated: 2025/10/23 22:36:34 by afogonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "mem.h"
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {

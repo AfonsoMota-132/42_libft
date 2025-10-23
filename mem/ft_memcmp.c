@@ -5,12 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: afogonca <afogonca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/26 12:08:34 by afogonca          #+#    #+#             */
-/*   Updated: 2024/10/26 12:25:32 by afogonca         ###   ########.fr       */
+/*   Created: 2025/10/23 22:37:09 by afogonca          #+#    #+#             */
+/*   Updated: 2025/10/23 22:37:10 by afogonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "mem.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
