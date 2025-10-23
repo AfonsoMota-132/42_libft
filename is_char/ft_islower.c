@@ -5,12 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: afogonca <afogonca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/22 09:02:38 by afogonca          #+#    #+#             */
-/*   Updated: 2025/10/22 09:02:52 by afogonca         ###   ########.fr       */
+/*   Created: 2025/10/23 21:10:20 by afogonca          #+#    #+#             */
+/*   Updated: 2025/10/23 21:11:06 by afogonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "is_char.h"
 
 int	ft_islower(int c)
 {

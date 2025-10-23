@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afogonca <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: afogonca <afogonca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/18 12:58:54 by afogonca          #+#    #+#             */
-/*   Updated: 2024/10/18 13:00:03 by afogonca         ###   ########.fr       */
+/*   Created: 2025/10/23 21:10:15 by afogonca          #+#    #+#             */
+/*   Updated: 2025/10/23 21:11:05 by afogonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "is_char.h"
 
 int	ft_isdigit(int c)
 {

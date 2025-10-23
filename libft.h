@@ -20,16 +20,12 @@
 # include <stdarg.h>
 # include <fcntl.h>
 
+
 //		Libc		//
 //		is_char
-int		ft_isalpha(int c);
-int		ft_isdigit(int c);
-int		ft_isalnum(int c);
-int		ft_isascii(int c);
-int		ft_isprint(int c);
-int		ft_islower(int c);
-int		ft_isupper(int c);
-
+# ifndef IS_CHAR_H
+#  include "./is_char/is_char.h"
+# endif
 
 
 size_t	ft_strlen(const char *s);
@@ -73,10 +69,10 @@ typedef struct s_list
 }				t_list;
 
 t_list	*ft_lstnew(void *content);
-void	ft_lstadd_front(t_list **lst, t_list *new);
+void	ft_lstadd_front(t_list **lst, t_list *newnode);
 int		ft_lstsize(t_list *lst);
 t_list	*ft_lstlast(t_list *lst);
-void	ft_lstadd_back(t_list **lst, t_list *new);
+void	ft_lstadd_back(t_list **lst, t_list *newnode);
 void	ft_lstdelone(t_list *lst, void (*del)(void*));
 void	ft_lstclear(t_list **lst, void (*del)(void*));
 void	ft_lstiter(t_list *lst, void (*f)(void *));

@@ -31,7 +31,8 @@ EXTRA = extra/ft_chrjoin.c extra/ft_atol.c extra/ft_strcmp.c extra/ft_matrixcpy.
 IS_CHAR = $(addprefix is_char/, ft_isalnum.c ft_isalpha.c ft_isascii.c \
 		  ft_isdigit.c ft_islower.c ft_isprint.c ft_isupper.c)
 
-SRCS = $(IS_CHAR) $(PRINTF) $(GNL) $(EXTRA)
+SRCS = $(IS_CHAR)
+#		$(PRINTF) $(GNL) $(EXTRA)
 #     	ft_strlen.c ft_memset.c ft_bzero.c ft_memcpy.c ft_memmove.c ft_substr.c \
 # 		ft_strjoin.c ft_strlcpy.c ft_strlcat.c ft_toupper.c ft_tolower.c ft_atoi.c \
 # 		ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_itoa.c \

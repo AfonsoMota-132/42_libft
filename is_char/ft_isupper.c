@@ -5,12 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: afogonca <afogonca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/22 09:06:48 by afogonca          #+#    #+#             */
-/*   Updated: 2025/10/22 09:09:51 by afogonca         ###   ########.fr       */
+/*   Created: 2025/10/23 21:10:31 by afogonca          #+#    #+#             */
+/*   Updated: 2025/10/23 21:12:13 by afogonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "is_char.h"
 
 int	ft_isupper(int c)
 {

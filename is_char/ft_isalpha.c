@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afogonca <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: afogonca <afogonca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/18 12:54:08 by afogonca          #+#    #+#             */
-/*   Updated: 2024/10/21 14:42:23 by afogonca         ###   ########.fr       */
+/*   Created: 2025/10/23 21:10:04 by afogonca          #+#    #+#             */
+/*   Updated: 2025/10/23 21:10:06 by afogonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h" 
+#include "is_char.h"
 
 int	ft_isalpha(int c)
 {
