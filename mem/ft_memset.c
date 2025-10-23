@@ -6,11 +6,11 @@
 /*   By: afogonca <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 13:14:38 by afogonca          #+#    #+#             */
-/*   Updated: 2024/10/23 08:57:31 by afogonca         ###   ########.fr       */
+/*   Updated: 2025/10/23 17:10:19 by afogonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
 void	*ft_memset(void *s, int c, size_t n)
 {

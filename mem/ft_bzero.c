@@ -10,18 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {
-	unsigned char	*str_store;
-	size_t			i;
-
-	i = 0;
-	str_store = (unsigned char *) s;
-	while (i < n)
-	{
-		str_store[i] = '\0';
-		i++;
-	}
+	ft_memset(s, 0, n);
 }
