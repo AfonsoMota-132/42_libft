@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strchrn_len.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afogonca <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: afogonca <afogonca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/18 13:11:07 by afogonca          #+#    #+#             */
-/*   Updated: 2024/10/21 15:05:08 by afogonca         ###   ########.fr       */
+/*   Created: 2025/10/24 09:01:05 by afogonca          #+#    #+#             */
+/*   Updated: 2025/10/24 09:02:07 by afogonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "in_str.h"
 
-size_t	ft_strlen(const char *s)
+size_t	ft_strchrn_len(const char *str, char c, size_t max)
 {
 	size_t	i;
 
 	i = 0;
-	while (s[i] != '\0')
+	while (i < max && str[i] && str[i] != c)
 		i++;
 	return (i);
 }
