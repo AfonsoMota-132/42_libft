@@ -19,9 +19,12 @@
 
 char	*ft_strchr(const char *s, int c);
 size_t	ft_strchr_len(const char *s, char c);
+size_t	ft_strrchrn_len(const char *str, char c, size_t max);
+
 char	*ft_strrchr(const char *s, int c);
 size_t	ft_strrchr_len(const char *s, char c);
 size_t	ft_strchrn_len(const char *str, char c, size_t max);	
+
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 
 #endif
