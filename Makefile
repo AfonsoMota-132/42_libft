@@ -37,8 +37,7 @@ MEM = $(addprefix mem/, ft_bzero.c ft_calloc.c ft_memchr.c ft_memcmp.c \
 IN_STR = $(addprefix in_str/, ft_strchr.c ft_strchr_len.c ft_strrchr.c \
 			ft_strrchr_len.c ft_strnstr.c)
 
-SRCS = $(IS_CHAR) $(MEM) $(IN_STR)
-#		$(PRINTF) $(GNL) $(EXTRA)
+SRCS = $(IS_CHAR) $(MEM) $(IN_STR) $(PRINTF) $(GNL) $(EXTRA)
 #     	ft_strlen.c ft_substr.c \
 # 		ft_strjoin.c ft_strlcpy.c ft_strlcat.c ft_toupper.c ft_tolower.c ft_atoi.c \
 # 		ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_itoa.c \
