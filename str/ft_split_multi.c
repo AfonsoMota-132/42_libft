@@ -5,12 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: afogonca <afogonca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/07 10:31:04 by afogonca          #+#    #+#             */
-/*   Updated: 2025/03/07 10:31:43 by afogonca         ###   ########.fr       */
+/*   Created: 2025/10/27 09:00:56 by afogonca          #+#    #+#             */
+/*   Updated: 2025/10/27 09:01:04 by afogonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "str.h"
 
 int	is_separator(char c, char *sep)
 {

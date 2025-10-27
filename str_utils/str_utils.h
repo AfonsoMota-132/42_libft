@@ -1,31 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   in_str.h                                           :+:      :+:    :+:   */
+/*   str_utils.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afogonca <afogonca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/23 22:48:53 by afogonca          #+#    #+#             */
-/*   Updated: 2025/10/27 09:06:11 by afogonca         ###   ########.fr       */
+/*   Created: 2025/10/27 08:44:26 by afogonca          #+#    #+#             */
+/*   Updated: 2025/10/27 08:45:10 by afogonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef IN_STR_H
-# define IN_STR_H
+#ifndef STR_UTILS_H
+# define STR_UTILS_H
 
 # ifndef LIBFT_H
 #  include "../libft.h"
 # endif
 
-char	*ft_strchr(const char *s, int c);
-size_t	ft_strchr_len(const char *s, char c);
-size_t	ft_strrchrn_len(const char *str, char c, size_t max);
-size_t	ft_str_not_chrlen(const char *str, int c);
-
-char	*ft_strrchr(const char *s, int c);
-size_t	ft_strrchr_len(const char *s, char c);
-size_t	ft_strchrn_len(const char *str, char c, size_t max);	
-
-char	*ft_strnstr(const char *big, const char *little, size_t len);
+int	ft_strcmp(char *s1, char *s2);
 
 #endif

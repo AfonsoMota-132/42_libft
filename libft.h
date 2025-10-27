@@ -32,6 +32,12 @@
 # ifndef IN_STR_H
 #  include "./in_str/in_str.h"
 # endif
+# ifndef STR_TO_H
+#  include "./str_to/str_to.h"
+# endif
+# ifndef STR_UTILS_H
+#  include "./str_utils/str_utils.h"
+# endif
 
 
 char	*ft_chrjoin(char const *str, char const chr);
@@ -43,8 +49,6 @@ char	**ft_split_multi(char *str, char *charset);
 size_t	ft_strlen(const char *s);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 size_t	ft_strlcat(char *dest, const char *src, size_t size);
-int		ft_toupper(int c);
-int		ft_tolower(int c);
 
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 int		ft_atoi(const char *nptr);

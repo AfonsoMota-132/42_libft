@@ -1,21 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   str_to.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afogonca <afogonca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/08 21:06:50 by afogonca          #+#    #+#             */
-/*   Updated: 2025/01/08 21:08:27 by afogonca         ###   ########.fr       */
+/*   Created: 2025/10/27 08:32:37 by afogonca          #+#    #+#             */
+/*   Updated: 2025/10/27 08:33:11 by afogonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strcmp(char *s1, char *s2)
-{
-	int	i;
+#ifndef STR_TO_H
+# define STR_TO_H
 
-	i = 0;
-	while (s1[i] && s2[i] && s1[i] == s2[i])
-		i++;
-	return (s1[i] - s2[i]);
-}
+# ifndef LIBFT_H
+#  include "../libft.h"
+# endif
+
+int		ft_tolower(int c);
+int		ft_toupper(int c);
+void	ft_str_toupper(char *str);
+void	ft_str_tolower(char *str);
+
+#endif

@@ -1,19 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afogonca <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: afogonca <afogonca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/22 12:05:32 by afogonca          #+#    #+#             */
-/*   Updated: 2024/10/22 12:06:41 by afogonca         ###   ########.fr       */
+/*   Created: 2025/10/27 08:34:52 by afogonca          #+#    #+#             */
+/*   Updated: 2025/10/27 08:35:33 by afogonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_tolower(int c)
+#include "str_to.h"
+
+int	ft_toupper(int c)
 {
-	if (c >= 65 && c <= 90)
-		return (c + 32);
-	else
-		return (c);
+	return (c - (ft_islower(c) * 32));
 }

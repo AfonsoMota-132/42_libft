@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_str_not_chrlen.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afogonca <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: afogonca <afogonca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/18 13:11:07 by afogonca          #+#    #+#             */
-/*   Updated: 2024/10/21 15:05:08 by afogonca         ###   ########.fr       */
+/*   Created: 2025/10/27 09:04:25 by afogonca          #+#    #+#             */
+/*   Updated: 2025/10/27 09:05:36 by afogonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "in_str.h"
 
-size_t	ft_strlen(const char *s)
+size_t	ft_str_not_chrlen(const char *str, int c)
 {
 	size_t	i;
 
 	i = 0;
-	while (s[i] != '\0')
+	while (str[i] && str[i] == c)
 		i++;
 	return (i);
 }

@@ -1,21 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   str.h                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afogonca <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: afogonca <afogonca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/22 12:03:19 by afogonca          #+#    #+#             */
-/*   Updated: 2024/10/23 16:56:04 by passunca         ###   ########.fr       */
+/*   Created: 2025/10/27 08:59:24 by afogonca          #+#    #+#             */
+/*   Updated: 2025/10/27 08:59:55 by afogonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef STR_H
+# define STR_H
 
-int	ft_toupper(int c)
-{
-	if (c >= 97 && c <= 122)
-		return (c - 32);
-	else
-		return (c);
-}
+# ifndef LIBFT_H
+#  include "../libft.h"
+# endif
+
+char	*ft_chrjoin(char const *str, char const chr);
+
+#endif

@@ -1,33 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_chrjoin.c                                       :+:      :+:    :+:   */
+/*   ft_str_toupper.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: afogonca <afogonca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/17 11:07:46 by afogonca          #+#    #+#             */
-/*   Updated: 2024/11/17 11:07:48 by afogonca         ###   ########.fr       */
+/*   Created: 2025/10/27 08:38:48 by afogonca          #+#    #+#             */
+/*   Updated: 2025/10/27 08:39:05 by afogonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "str_to.h"
 
-char	*ft_chrjoin(char const *str, char const chr)
+void	ft_str_toupper(char *str)
 {
-	size_t	size;
 	size_t	i;
-	char	*dstr;
 
+	if (!str)
+		return ;
 	i = 0;
-	if (!str && !chr)
-		return (NULL);
-	size = ft_strlen(str) + 1;
-	dstr = (char *) malloc(sizeof(char) * (size + 1));
-	if (str == NULL)
-		return (NULL);
-	while (*str != '\0')
-		dstr[i++] = *(str++);
-	dstr[i++] = chr;
-	dstr[i] = '\0';
-	return (dstr);
+	while (str[i])
+		str[i] = ft_toupper(str[i]);
 }
