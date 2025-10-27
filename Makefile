@@ -41,7 +41,7 @@ STR = $(addprefix str/, ft_chrjoin.c ft_split.c ft_split_multi.c ft_strdup.c \
 			ft_strtrim.c ft_substr.c)
 
 PRINT_FD = $(addprefix print_fd/, ft_putchar_fd.c ft_putstr_fd.c \
-			ft_putendl_fd.c)
+			ft_putendl_fd.c ft_putnbr_fd.c)
 
 SRCS =	$(IS_CHAR) $(MEM) $(IN_STR) $(STR_TO) $(STR_UTILS) $(STR) \
 		$(PRINT_FD) \
