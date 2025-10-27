@@ -6,11 +6,11 @@
 /*   By: afogonca <afogonca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 09:18:36 by afogonca          #+#    #+#             */
-/*   Updated: 2024/10/25 09:51:36 by afogonca         ###   ########.fr       */
+/*   Updated: 2025/10/27 15:04:51 by afogonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "convert.h"
 
 static int		ft_nbrlen(int n);
 static void		ft_fill(int len, int offset, int n, char *str);
@@ -23,7 +23,7 @@ char	*ft_itoa(int n)
 
 	offset = 0;
 	len = ft_nbrlen(n);
-	str = malloc(sizeof(char) * (len + 1));
+	str = ft_calloc(sizeof(char), (len + 1));
 	if (str == NULL)
 		return (NULL);
 	if (n == -2147483648)

@@ -6,11 +6,11 @@
 /*   By: afogonca <afogonca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 09:09:34 by afogonca          #+#    #+#             */
-/*   Updated: 2024/10/25 09:10:45 by afogonca         ###   ########.fr       */
+/*   Updated: 2025/10/27 14:56:26 by afogonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "print_fd.h"
 
 void	ft_putstr_fd(char *s, int fd)
 {

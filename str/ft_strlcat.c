@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afogonca <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: afogonca <afogonca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/07 10:33:39 by afogonca          #+#    #+#             */
-/*   Updated: 2024/10/22 12:02:53 by afogonca         ###   ########.fr       */
+/*   Created: 2025/10/27 14:42:33 by afogonca          #+#    #+#             */
+/*   Updated: 2025/10/27 14:42:34 by afogonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "str.h"
 
 size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {

@@ -54,11 +54,10 @@ static int	ft_segcount(char const *s, char sep)
 	while (s[i])
 	{
 		i += ft_str_not_chrlen(&s[i], sep);
-		if (s[i])
-		{
-			segs++;
-			i++;
-		}
+		if (!s[i])
+			break ;
+		segs++;
+		i++;
 		i += ft_strchr_len(&s[i], sep);
 	}
 	return (segs);
@@ -76,23 +75,4 @@ char	**ft_free_split(char **strs, size_t seg)
 	}
 	free(strs);
 	return (0);
-}
-
-int	main(int ac, char **av)
-{
-	char	**arr;
-	size_t	i;
-
-	if (ac == 3)
-	{
-		arr = ft_split(av[1], av[2][0]);
-		i = 0;
-		while (arr[i])
-		{
-			printf("%s\n", arr[i]);
-			free(arr[i]);
-			i++;
-		}
-		free(arr);
-	}
 }

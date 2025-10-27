@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: afogonca <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: afogonca <afogonca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/23 08:41:21 by afogonca          #+#    #+#             */
-/*   Updated: 2024/10/23 09:38:32 by afogonca         ###   ########.fr       */
+/*   Created: 2025/10/27 14:43:52 by afogonca          #+#    #+#             */
+/*   Updated: 2025/10/27 14:44:05 by afogonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "str.h"
 
 static size_t	ft_totlen(size_t str_len, size_t start, size_t len);
 
@@ -28,7 +28,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		start = 0;
 		len = 0;
 	}
-	sub_str = (char *) malloc(sizeof(char) * (ft_totlen(str_len, start, len)));
+	sub_str = (char *) ft_calloc(sizeof(char),
+			(ft_totlen(str_len, start, len)));
 	if (sub_str == NULL)
 		return (NULL);
 	i = 0;

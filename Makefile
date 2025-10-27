@@ -36,14 +36,18 @@ STR_TO = $(addprefix str_to/, ft_tolower.c ft_toupper.c ft_str_tolower.c \
 
 STR_UTILS = $(addprefix str_utils/, ft_strcmp.c ft_strncmp.c ft_strlen.c)
 
-SRCS = $(IS_CHAR) $(MEM) $(IN_STR) $(STR_TO) $(STR_UTILS) \
-	   $(PRINTF) $(GNL)
-#     	ft_strlen.c ft_substr.c \
-# 		ft_strjoin.c ft_strlcpy.c ft_strlcat.c ft_toupper.c ft_tolower.c ft_atoi.c \
-# 		ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_itoa.c \
-# 		ft_putnbr_fd.c ft_strncmp.c ft_strtrim.c ft_strdup.c ft_strchr.c \
-# 		ft_strrchr.c ft_strmapi.c ft_striteri.c ft_memcmp.c \
-# 		ft_strnstr.c ft_split.c $(PRINTF) $(GNL) $(EXTRA)
+STR = $(addprefix str/, ft_chrjoin.c ft_split.c ft_split_multi.c ft_strdup.c \
+			ft_striteri.c ft_strjoin.c ft_strlcat.c ft_strlcpy.c ft_strmapi.c \
+			ft_strtrim.c ft_substr.c)
+
+PRINT_FD = $(addprefix print_fd/, ft_putchar_fd.c ft_putstr_fd.c \
+			ft_putendl_fd.c)
+
+SRCS =	$(IS_CHAR) $(MEM) $(IN_STR) $(STR_TO) $(STR_UTILS) $(STR) \
+		$(PRINT_FD) \
+		$(PRINTF) $(GNL)
+# ft_itoa.c) 		ft_atoi.c \
+# 		ft_putnbr_fd.c \
 
 BONUS_OBJS = ${BONUS_SRCS:.c=.o}
 OBJS = ${SRCS:.c=.o}

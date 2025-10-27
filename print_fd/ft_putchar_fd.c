@@ -5,12 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: afogonca <afogonca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/24 18:39:37 by afogonca          #+#    #+#             */
-/*   Updated: 2024/10/24 18:40:39 by afogonca         ###   ########.fr       */
+/*   Created: 2025/10/27 14:55:20 by afogonca          #+#    #+#             */
+/*   Updated: 2025/10/27 14:55:26 by afogonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "print_fd.h"
 
 void	ft_putchar_fd(char c, int fd)
 {

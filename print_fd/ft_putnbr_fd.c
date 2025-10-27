@@ -6,18 +6,18 @@
 /*   By: afogonca <afogonca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 09:08:30 by afogonca          #+#    #+#             */
-/*   Updated: 2024/10/25 09:08:59 by afogonca         ###   ########.fr       */
+/*   Updated: 2025/10/27 14:57:31 by afogonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "print_fd.h"
 
 void	ft_putnbr_fd(int n, int fd)
 {
 	if (n == -2147483648)
 	{
-		ft_putstr_fd("-2", fd);
-		n = 147483648;
+		ft_putstr_fd("-2147483648", fd);
+		return ;
 	}
 	else if (n < 0)
 	{

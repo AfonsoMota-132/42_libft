@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: passunca <passunca@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: afogonca <afogonca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/24 15:56:39 by passunca          #+#    #+#             */
-/*   Updated: 2024/10/24 16:06:03 by passunca         ###   ########.fr       */
+/*   Created: 2025/10/27 15:02:24 by afogonca          #+#    #+#             */
+/*   Updated: 2025/10/27 15:03:51 by afogonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libft.h"
+#include "convert.h"
 
 int	ft_atoi(const char *nptr)
 {

@@ -20,15 +20,12 @@
 # include <stdarg.h>
 # include <fcntl.h>
 
-
-//		Libc		//
-//		is_char
 # ifndef IS_CHAR_H
 #  include "./is_char/is_char.h"
 # endif
 # ifndef MEM_H
 #  include "./mem/mem.h"
-#endif
+# endif
 # ifndef IN_STR_H
 #  include "./in_str/in_str.h"
 # endif
@@ -38,35 +35,18 @@
 # ifndef STR_UTILS_H
 #  include "./str_utils/str_utils.h"
 # endif
+# ifndef STR_H
+#  include "./str/str.h"
+# endif
+# ifndef PRINT_FD_H
+#  include "./print_fd/print_fd.h"
+# endif
+# ifndef CONVERT_H
+#  include "./convert/convert.h"
+# endif
 
-
-char	*ft_chrjoin(char const *str, char const chr);
-long	ft_atol(const char *str);
-int		ft_strcmp(char *s1, char *s2);
 void	**ft_matrixcopy(void **matrix);
 void	ft_matrix_free(void **matrix);
-char	**ft_split_multi(char *str, char *charset);
-size_t	ft_strlen(const char *s);
-size_t	ft_strlcpy(char *dst, const char *src, size_t size);
-size_t	ft_strlcat(char *dest, const char *src, size_t size);
-
-int		ft_strncmp(const char *s1, const char *s2, size_t n);
-int		ft_atoi(const char *nptr);
-char	*ft_strdup(const char *src);
-
-//		Additional		//
-char	*ft_substr(char const *s, unsigned int start, size_t len);
-char	*ft_strjoin(char const *s1, char const *s2);
-char	*ft_strtrim(char const *s1, char const *set);
-char	**ft_split(char const *s, char c);
-char	**ft_free_split(char **strs, size_t seg);
-char	*ft_itoa(int n);
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
-void	ft_striteri(char *s, void (*f)(unsigned int, char*));
-void	ft_putchar_fd(char c, int fd);
-void	ft_putstr_fd(char *s, int fd);
-void	ft_putendl_fd(char *s, int fd);
-void	ft_putnbr_fd(int n, int fd);
 
 //		Lists		//
 typedef struct s_list
@@ -112,8 +92,5 @@ int		ft_strlen_gnl(const char *str);
 char	*ft_strjoin_gnl(char *s1, char *s2);
 char	*ft_getline(char *buffer);
 char	*ft_bufferupdt(char *buffer);
-
-//		Extra		//
-
 
 #endif
