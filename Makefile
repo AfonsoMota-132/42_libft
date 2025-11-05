@@ -31,6 +31,9 @@ MEM = $(addprefix mem/, ft_bzero.c ft_calloc.c ft_memchr.c ft_memcmp.c \
 IN_STR = $(addprefix in_str/, ft_strchr.c ft_strchr_len.c ft_strrchr.c \
 			ft_strrchr_len.c ft_strnstr.c ft_str_not_chrlen.c)
 
+IS_CHAR = $(addprefix is_char/, ft_isalnum.c ft_isalpha.c ft_isascii.c \
+			ft_isdigit.c ft_islower.c ft_isupper.c)
+
 STR_TO = $(addprefix str_to/, ft_tolower.c ft_toupper.c ft_str_tolower.c \
 			ft_str_toupper.c)
 
