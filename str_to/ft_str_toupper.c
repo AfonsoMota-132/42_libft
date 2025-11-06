@@ -20,5 +20,8 @@ void	ft_str_toupper(char *str)
 		return ;
 	i = 0;
 	while (str[i])
+	{
 		str[i] = ft_toupper(str[i]);
+		i++;
+	}
 }

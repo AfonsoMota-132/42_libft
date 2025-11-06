@@ -20,5 +20,8 @@ void	ft_str_tolower(char *str)
 		return ;
 	i = 0;
 	while (str[i])
+	{
 		str[i] = ft_tolower(str[i]);
+		i++;
+	}
 }
