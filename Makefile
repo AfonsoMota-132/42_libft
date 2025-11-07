@@ -46,8 +46,10 @@ STR = $(addprefix str/, ft_chrjoin.c ft_split.c ft_split_multi.c ft_strdup.c \
 PRINT_FD = $(addprefix print_fd/, ft_putchar_fd.c ft_putstr_fd.c \
 			ft_putendl_fd.c ft_putnbr_fd.c)
 
+CONVERT = $(addprefix convert/, ft_atoi.c ft_atol.c ft_itoa.c)
+
 SRCS =	$(IS_CHAR) $(MEM) $(IN_STR) $(STR_TO) $(STR_UTILS) $(STR) \
-		$(PRINT_FD) \
+		$(PRINT_FD) $(CONVERT) \
 		$(PRINTF) $(GNL)
 # ft_itoa.c) 		ft_atoi.c \
 # 		ft_putnbr_fd.c \
