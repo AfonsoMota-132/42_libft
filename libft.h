@@ -73,6 +73,7 @@ int		ft_printfnbr(int nbr);
 int		ft_printfunbr(unsigned int nbr);
 int		ft_printfhex(unsigned int nbr, int uporlow);
 int		ft_printfpointer(void *pointer);
+int		ft_nbrlen(int n);
 
 //		GNL			//
 # ifndef BUFFER_SIZE

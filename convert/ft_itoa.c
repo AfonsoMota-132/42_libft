@@ -12,7 +12,6 @@
 
 #include "convert.h"
 
-static int		ft_nbrlen(int n);
 static void		ft_fill(int len, int offset, int n, char *str);
 
 char	*ft_itoa(int n)
@@ -54,7 +53,7 @@ static	void	ft_fill(int len, int offset, int n, char *str)
 	}
 }
 
-static int	ft_nbrlen(int n)
+int	ft_nbrlen(int n)
 {
 	int	len;
 
@@ -78,6 +77,7 @@ static int	ft_nbrlen(int n)
 	}
 	return (len);
 }
+
 /*
 int	main(void)
 {
