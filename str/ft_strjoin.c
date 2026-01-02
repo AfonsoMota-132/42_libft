@@ -6,7 +6,7 @@
 /*   By: afogonca <afogonca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 14:37:01 by afogonca          #+#    #+#             */
-/*   Updated: 2025/10/27 14:41:39 by afogonca         ###   ########.fr       */
+/*   Updated: 2026/01/02 19:43:49 by afogonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,8 @@
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	size_t	size;
-	size_t	i;
 	char	*str;
 
-	i = 0;
 	if (s1 == NULL && s2 == NULL)
 		return (NULL);
 	size = ft_strlen(s1) + ft_strlen(s2);
