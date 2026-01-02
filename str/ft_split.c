@@ -13,6 +13,7 @@
 #include "str.h"
 
 static int		ft_segcount(char const *s, char sep);
+static char	**ft_free_error(char **strs, size_t seg);
 
 char	**ft_split(char const *s, char c)
 {
@@ -34,7 +35,7 @@ char	**ft_split(char const *s, char c)
 		i += ft_str_not_chrlen(&s[i], c);
 		strs[seg] = ft_calloc(sizeof(char), ft_strchr_len(&s[i], c) + 1);
 		if (!strs[seg])
-			return (ft_free_split(strs, seg));
+			return (ft_free_error(strs, seg));
 		ft_memcpy(strs[seg], &s[i], ft_strchr_len(&s[i], c));
 		i += ft_strchr_len(&s[i], c);
 		++seg;
@@ -63,7 +64,7 @@ static int	ft_segcount(char const *s, char sep)
 	return (segs);
 }
 
-char	**ft_free_split(char **strs, size_t seg)
+static char	**ft_free_error(char **strs, size_t seg)
 {
 	size_t	i;
 
@@ -74,5 +75,18 @@ char	**ft_free_split(char **strs, size_t seg)
 		++i;
 	}
 	free(strs);
-	return (0);
+	return (NULL);
+}
+
+void	ft_free_split(char **strs)
+{
+	size_t	i;
+
+	i = 0;
+	while (strs[i])
+	{
+		free(strs[i]);
+		i++;
+	}
+	free(strs);
 }

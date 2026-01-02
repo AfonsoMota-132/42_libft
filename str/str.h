@@ -20,7 +20,7 @@
 char	*ft_chrjoin(char const *str, char const chr);
 
 char	**ft_split(char const *s, char c);
-char	**ft_free_split(char **strs, size_t seg);
+void	ft_free_split(char **strs);
 char	*ft_strdup(const char *src);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
